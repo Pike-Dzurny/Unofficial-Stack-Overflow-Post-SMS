@@ -1,7 +1,7 @@
 import time
 import random
 from getQuestions import get_questions
-from sendMessage import sendMessage
+from sendMessage import send_message
 
 max_answers = 0
 vote_min = -3
