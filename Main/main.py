@@ -1,14 +1,14 @@
-import time 
-from getQuestions import getQuestions
-from sendMessage import sendMessage
+import time
 import random
+from getQuestions import get_questions
+from sendMessage import sendMessage
 
-maxanswers = 0
-votemin = -3
-votemax = 1
+max_answers = 0
+vote_min = -3
+vote_max = 1
 
 while 1:
-    content = getQuestions(maxanswers, votemin, votemax, 'python')
+    content = get_questions(max_answers, vote_min, vote_max, 'python')
     content = random.choice(content)
     time.sleep(3)
     sendMessage(content)
