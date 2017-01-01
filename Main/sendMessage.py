@@ -5,12 +5,14 @@ authToken = '*'
 
 twilioCli = TwilioRestClient(accountSID, authToken)
 
-myTwilioNumber = '+*'
+myTwilioNumber = '*'
 myCellPhone = '*'
 
-def sendMessage(sendmessage):
+
+def send_message(send_message):
+
     try:
-        str(sendmessage)
-        message = twilioCli.messages.create(body=sendmessage, from_=myTwilioNumber, to=myCellPhone)
+        str(send_message)
+        message = twilioCli.messages.create(body=send_message, from_=myTwilioNumber, to=myCellPhone)
     except:
         print("Bad message format")
