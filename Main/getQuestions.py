@@ -10,7 +10,7 @@ def get_questions(max_answers=0, vote_min=-1, vote_max=3, *tags):
     else:
         for tags in tags:
             result = requests.get(
-                "https://api.stackexchange.com/2.2/search?page=1&order=desc&sort=creation&tagged={0}&site=stackoverflow".format(
+                'https://api.stackexchange.com/2.2/search?page=1&order=desc&sort=creation&tagged={0}&site=stackoverflow'.format(
                     tags))
             data = result.json()
             for items in data['items']:
