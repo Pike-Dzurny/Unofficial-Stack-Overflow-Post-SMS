@@ -5,7 +5,7 @@ import time
 def get_questions(max_answers=0, vote_min=-1, vote_max=3, *tags):
     questions = []
     if len(tags) == 0:
-        print("You have no tags.")
+        print('You have no tags.')
 
     else:
         for tags in tags:
