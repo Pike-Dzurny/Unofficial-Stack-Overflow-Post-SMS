@@ -15,4 +15,4 @@ def send_message(send_message):
         str(send_message)
         message = twilioCli.messages.create(body=send_message, from_=myTwilioNumber, to=myCellPhone)
     except:
-        print("Bad message format")
+        print('Bad message format')
